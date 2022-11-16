@@ -1,0 +1,12 @@
+query Posts {
+  posts {
+    data {
+      attributes {
+        Title
+        Slug
+        publishedAt
+        Content
+      }
+    }
+  }
+}
