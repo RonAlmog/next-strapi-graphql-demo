@@ -1,0 +1,10 @@
+query Tags {
+  tags {
+    data {
+      attributes {
+        Name
+        Slug
+      }
+    }
+  }
+}
