@@ -1,0 +1,12 @@
+query Cats {
+  cats {
+    data {
+      id
+      attributes {
+        name
+        age
+        color
+      }
+    }
+  }
+}

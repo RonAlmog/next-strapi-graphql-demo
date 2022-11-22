@@ -5,7 +5,7 @@ import StrapiApolloProvider from "../graphql/apollo";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <StrapiApolloProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </StrapiApolloProvider>
   );
 }
