@@ -1,0 +1,14 @@
+query Cat($id: ID!) {
+  cat(id: $id) {
+    data {
+      id
+      attributes {
+        name
+        age
+        color
+        dob
+        imageUrl
+      }
+    }
+  }
+}

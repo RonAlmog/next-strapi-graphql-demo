@@ -1,0 +1,12 @@
+query getReviews($id: ID!) {
+  reviews(sort: "createdAt:desc", filters: { cat: { id: { eq: id } } }) {
+    data {
+      id
+      attributes {
+        content
+        rating
+        createdAt
+      }
+    }
+  }
+}
