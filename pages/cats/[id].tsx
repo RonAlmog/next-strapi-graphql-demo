@@ -56,25 +56,21 @@ const CatPage = () => {
         <button type="button" onClick={() => getReviews()}>
           Load Reviews
         </button>
+        <div>
+          {dataReviews?.reviews?.data &&
+            dataReviews.reviews.data.map((r) => {
+              return (
+                <div key={r.id}>
+                  <p>{r.id}</p>
+                  <p>{r.attributes.content}</p>
+                  <p>{r.attributes.rating}</p>
+                </div>
+              );
+            })}
+        </div>
       </div>
     );
   }
 };
 
 export default CatPage;
-
-// export async function getStaticProps({ params }) {
-//   // const home = await prisma.home.findUnique({ where: { id: params.id } });
-//   const id = params.id;
-//   if (id) {
-//     return {
-//       props: JSON.parse(JSON.stringify(id)),
-//     };
-//   }
-//   return {
-//     redirect: {
-//       destination: "/",
-//       permanent: false,
-//     },
-//   };
-// }
